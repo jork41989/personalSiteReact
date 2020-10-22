@@ -1,0 +1,181 @@
+.projectText {
+  color: white;
+  font-size: 1.2em;
+  font-family: Monaco;
+  text-align: center;
+}
+
+.projectDesc{
+color: white;
+font-size: .8em;
+font-family: Monaco;
+text-align: center
+}
+
+.projectInfo{
+position: relative;
+top: -50%;
+justify-content: center;
+align-items: center;
+display: flex;
+flex-direction: column;
+width: 80%;
+left: 10%;
+padding: 10px 0px 10px 0px;
+}
+
+
+.projectPreview {
+  width: 33.33%;
+  height: 600px;
+  background-position: center;
+  background-size: cover;
+  background-color: black;
+  margin-top: 12px;
+}
+
+.projectPreview img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  opacity: 0.4;
+}
+
+.projectPreview img:hover {
+  opacity: 1;
+}
+
+#bodyProjects {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
+.actionImg {
+  background: url("/images/actionScreen.jpg");
+}
+
+.quackImg {
+  background: url("/images/quackScreen.jpg");
+}
+
+.cumulusImg {
+  background: url("/images/CumulusScreen.jpg");
+}
+
+.sneezeImg{
+  background: url("/images/sneezeScreen.png");
+}
+
+.masksImg{
+  background: url("/images/masksImg.png");
+}
+
+.ppaImg{
+  background: url("/images/ppaImg.png");
+}
+
+.previewImg {
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  opacity: 0.4;
+}
+
+.previewImg:hover {
+  opacity: 1;
+}
+
+.projectText:hover .previewImg {
+  opacity: 1;
+}
+
+.projectPreview:hover .projectInfo {
+  background: rgba(0, 0, 0, 0.671);
+}
+
+.projectModal {
+  position: absolute;
+  width: 87%;
+  height: 85%;
+  background: #073642;
+  border-radius: 30px;
+  margin: 10px;
+  padding: 4%;
+  border: #586E75 11px solid;
+  top: 0;
+  left: 1%;
+}
+
+#closeModal {
+  font-family: Monaco;
+  font-size: 2em;
+  color: #EEE8D5;
+  position: absolute;
+  right: 46px;
+  cursor: pointer;
+  top: 40px;
+}
+
+.hideModal {
+  display: none;
+}
+
+.showModal {
+  display: flex;
+}
+
+.projectDivs{
+  margin: 2%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projectLink{
+    font-family: Monaco;
+    font-size: 1em;
+    color: #EEE8D5;
+    text-decoration: none;
+}
+
+.projectLink:first-child{
+  margin-right: 75px;
+}
+
+.projectLinksDiv{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.projectName{
+  font-family: Monaco;
+  font-size: 2em;
+  color: #EEE8D5;
+  text-align: center;
+  display: inherit;
+  margin-bottom: 10px;
+}
+
+.projectDes{
+  font-family: Monaco;
+  font-size: 1.5em;
+  color: #EEE8D5;
+}
+
+@media screen and (max-width: 1160px) {
+  #bodyProjects{
+    flex-direction: column;
+  }
+
+  .projectPreview{
+    width: 100%;
+    margin-top: 0px;
+  }
+
+}

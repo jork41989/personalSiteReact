@@ -1,0 +1,69 @@
+#bodyResume{
+  display: flex;
+  flex-direction: column;
+}
+
+.resumeName{
+  font-family: Monaco;
+  font-size: 2em;
+  color: #b58900;
+  text-align: center;
+  display: inherit;
+  margin-bottom: 10px;
+}
+.contactInfo{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: Monaco;
+    font-size: 1.5em;
+    color: #EEE8D5;
+    text-decoration: none;
+}
+
+.resumeHeads{
+    font-family: Monaco;
+    font-size: 1.5em;
+    color: #b58900;
+    display: inherit;
+    margin-bottom: 10px;
+}
+
+.resumeText{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: Monaco;
+  font-size: 1.2em;
+  color: #EEE8D5;
+}
+.resumeText li{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.resumeJobDate{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.noUL{
+  text-decoration: none;
+}
+
+.boldMe{
+  font-weight: 900;
+  margin-right: 40px;
+}
+
+.resumeList{
+  list-style-type: circle;
+  margin-left: 22px;
+}
+.resumeJobTitleLocation{
+  display: flex;
+  flex-direction: row;
+}
