@@ -1,38 +1,382 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.mainDiv {
+  background: #002B36;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.headBar {
+  border-radius: 10px 10px 0px 0px;
+  margin-top: 1%;
+  width: 95%;
+  background: #586E75;
+  box-shadow: -2px -5px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100px;
+}
+
+.socialLogos {
+  margin-right: 10px;
+  align-self: center;
+  font-size: 36px;
+  color: #2aa198;
+  cursor: pointer;
+}
+
+.socialLogos :hover {
+  color: #ffffff;
+}
+
+.logoDiv {
+  display: flex;
+  flex-direction: row;
+}
+
+.logo {
+  margin-left: 10px;
+  height: 85px;
+  align-self: center;
+}
+
+.logoImg {
+  height: 85px;
+}
+
+p {
+  font-family: Monaco;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.Name {
+  margin-left: 20px;
+  font-family: Monaco;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 105px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FEFCFC;
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.contentMenu {
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+}
+
+.selectedMenu {
+  background: #586E75;
+}
+
+.notSelectedMenu {
+  background: #073642;
+}
+
+.notSelectedMenu:hover {
+  background: #586E75;
+}
+
+.menuTab {
+  text-decoration: none;
+  box-shadow: 0px -5px 4px rgba(0, 0, 0, 0.25);
+  width: 25%;
+  height: 35px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
 }
 
-.App-link {
-  color: #61dafb;
+.menuIcon {
+  font-family: Monaco;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 35px;
+  margin-right: 10px;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+.menuIconBlue {
+  color: #268bd2;
+}
+
+.menuIconOrange {
+  color: #cb4b16;
+}
+
+.menuIconYellow {
+  color: #b58900;
+}
+
+html {
+  background: #002B36;
+}
+
+.menuText {
+  font-family: Monaco;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 35px;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.contentBackground {
+  background: #586E75;
+  width: 95%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.contentBG1 {
+  background: #073642;
+  border-radius: 30px;
+  margin: 10px;
+  padding: 4%;
+}
+
+#aboutContent {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.aboutMainP {
+  font-family: Monaco;
+  font-style: normal;
+  font-weight: normal;
+  font-size: .8em;
+  margin-bottom: 25px;
+}
+
+.headerDiv {
+  padding: 30px 15px;
+}
+
+.sideBySide {
+  display: flex;
+  flex-direction: row;
+}
+
+.contentText {
+  font-family: Monaco;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  padding: 50px 15px;
+  line-height: 30px;
+  color: #EEE8D5;
+
+}
+
+
+.contentHeader {
+  font-size: 36px;
+  color: #b58900;
+
+  font-family: Monaco;
+}
+
+.profilePhotoDiv {
+  align-self: center;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+.profilePhoto {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+
+}
+
+.fadeMe {
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: 1s;
+}
+
+
+
+.openingBack {
+  position: absolute;
+  background-color: #002B36;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+}
+
+.openingText {
+  font-size: 40px;
+  line-height: 55px;
+  font-family: Monaco;
+  color: #EEE8D5;
+  letter-spacing: .15em;
+  border-right: .15em solid orange;
+  text-align: center;
+  margin: 0 auto;
+  overflow: hidden;
+  height: 55px;
+  width: fit-content;
+  animation:
+    blinking-cursor .5s step-end infinite;
+}
+
+.openingTextDiv {
+  padding-top: 20%;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+
+}
+
+.hideMe {
+  opacity: 0;
+  height: 0;
+  padding: 0;
+  transition-property: opacity, height, padding;
+  transition-duration: 2s, 0s, 0s;
+  transition-delay: 0s, 2s, 2.3s;
+
+}
+
+#bodySkills {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.skillsRow {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.skillBox {
+  width: 180px;
+  height: 180px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.skillBG1 {
+  background-color: #b58900;
+}
+
+.skillBG2 {
+  background-color: #cb4b16;
+}
+
+.skillBG3 {
+  background-color: #d30102;
+}
+
+.skillBG4 {
+  background-color: #d33682;
+}
+
+.skillBG5 {
+  background-color: #6c71c4;
+}
+
+.skillBG6 {
+  background-color: #268bd2;
+}
+
+.skillBG7 {
+  background-color: #2aa198;
+}
+
+.skillBG8 {
+  background-color: #859900;
+}
+
+.skillBox svg {
+  height: 150px;
+}
+
+.skillBox svg:hover {
+  margin-bottom: 5px;
+}
+
+
+.leftSide {
+  border-radius: 30px 0px 0px 30px;
+}
+
+.rightSide {
+  border-radius: 0px 30px 30px 0px;
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+
+
+
+@keyframes blinking-cursor {
+
+  from,
   to {
-    transform: rotate(360deg);
+    border-color: transparent
   }
+
+  50% {
+    border-color: orange
+  }
+}
+
+@media screen and (max-width: 1160px) {
+
+  .Name {
+    font-size: 2em;
+    margin-left: 5px;
+
+  }
+
+  .skillBox {
+
+    flex-direction: column;
+  }
+
+  .skillsRow {
+    flex-direction: column;
+  }
+
+  #bodySkills {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .leftSide {
+    border-radius: 30px 30px 0px 0px;
+  }
+
+  .rightSide {
+    border-radius: 0px 0px 30px 30px;
+  }
+
+  .sideBySide {
+    flex-direction: column-reverse;
+  }
+
 }

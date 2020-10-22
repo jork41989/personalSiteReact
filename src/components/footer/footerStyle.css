@@ -1,0 +1,100 @@
+.footerHead{
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  font-family: Monaco;
+  font-size: 1.5em;
+  color: #839495;
+  justify-content: flex-start;
+  background: #073642;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 25px;
+}
+
+.footerHeadUL{
+  border-bottom: #EEE8D5 1px;
+  color: #EEE8D5;
+}
+
+
+.footerMain{
+  width: 100%;
+}
+
+.footerHead p{
+  margin-right: 10px;
+}
+
+.footerLinks{
+  background: #002b36;
+}
+
+.footerSocialLink{
+  margin-left: 10px;
+  color: #839495;
+  padding: 5px 2px 5px 2px;
+}
+
+.footerSocialLink:hover{
+  color: #EEE8D5;
+}
+
+.footerSocial{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.footerSocialSingle{
+  display: flex;
+  flex-direction: row;
+  font-family: Monaco;
+  font-size: 1em;
+  margin-left: 25px;
+  padding-left: 5px;
+}
+
+.footerSocialPrecommand{
+  background: #073642;
+  color: #839495;
+  padding: 5px 2px 5px 2px;
+  
+}
+
+.footerSocialCommand{
+  background: #268bd2;
+  color: #002b36;
+  padding: 5px 2px 5px 2px;
+}
+
+.footerSocialGit{
+  background: #859900;
+  color: #002b36;
+  padding: 5px 2px 5px 2px;
+}
+
+.footerCopy {
+  background-color: rgb(0, 30, 38);
+  padding: 8px 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-family: Monaco;
+  font-size: 1em;
+  color: #839495;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footBranchBar{
+  display: flex;
+  flex-direction: row;
+}
+
+#footBranch{
+  margin-left: 5px;
+}
