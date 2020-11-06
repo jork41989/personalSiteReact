@@ -3,7 +3,7 @@
   flex-direction: row;
   margin-top: 10px;
   font-family: Monaco;
-  font-size: 1.5em;
+  /* font-size: 1.5em; */
   color: #839495;
   justify-content: flex-start;
   background: #073642;
@@ -19,7 +19,8 @@
 
 
 .footerMain{
-  width: 95%;
+  width: 100%;
+  
 }
 
 .footerHead p{
@@ -97,4 +98,23 @@
 
 #footBranch{
   margin-left: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  .footerHead{
+    font-size: .9em;
+  }
+
+  .footerSocialSingle{
+    font-size: .4em;
+    margin-left: 0;
+  }
+
+  .footerSocialPrecommand{
+    min-width: 100px;
+  }
+  .footerCopy{
+    font-size: .9em;
+  }
+
 }

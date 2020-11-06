@@ -138,6 +138,7 @@ html {
   width: 95%;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  margin-bottom: 30px;
 }
 
 .contentBG1 {
@@ -246,7 +247,7 @@ html {
 
 .hideMe {
   opacity: 0;
-  height: 0;
+  height: 0 !important;
   padding: 0;
   transition-property: opacity, height, padding;
   transition-duration: 2s, 0s, 0s;
@@ -345,18 +346,37 @@ html {
   }
 }
 
+@media screen and (max-width: 600px) {
+  .skillBox {
+    width: 100px;
+  }
+  .skillBox svg {
+    width: 95px;
+  }
+}
+
+
 @media screen and (max-width: 1160px) {
 
   .Name {
     font-size: 2em;
     margin-left: 5px;
+    line-height: 1.5em;
+  }
 
+  .menuText{
+    font-size: .9em;
+  }
+  .menuIcon{
+    font-size: 1em;
+    margin-right: 5px;
   }
 
   .skillBox {
 
     flex-direction: column;
   }
+
 
   .skillsRow {
     flex-direction: column;

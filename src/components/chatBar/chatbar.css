@@ -1,0 +1,26 @@
+.chatBar_Main{
+  width: 300px;
+  padding: 10px 10px 0px 10px;
+  max-height: 500px;
+  position: fixed;
+  bottom: 0;
+  right: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #586E75;
+  border-radius: 10px;
+}
+
+.chatBar_head{
+  height: 20px;
+  background: #073642;
+  color: #EEE8D5;
+  font-family: Monaco;
+  text-align: center;
+  cursor: pointer;
+}
+
+.chatFrame{
+  height:480px;
+}
