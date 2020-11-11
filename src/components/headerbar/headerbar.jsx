@@ -1,6 +1,7 @@
 import React from "react";
 
-export const HeaderBar = () => {
+export const HeaderBar = (props) => {
+
   return (
     <div className="headBar">
       <div className="logoDiv">

@@ -1,28 +1,38 @@
-import React, { useState} from "react";
+import React, { useEffect, useState} from "react";
 import { Link } from "react-router-dom";
 export const NavBar = () => {
-  const [activePage, setPage] = useState("about")
+  const [activePage, setPage] = useState("")
 
-  let pageSetter = (id) => {
-    let newId
-    let old = document.getElementById(activePage)
-    old.classList.remove("selectedMenu");
-    old.classList.add("notSelectedMenu");
-    newId = document.getElementById(id);
-    setPage(id);
-    newId.classList.add("selectedMenu");
-    newId.classList.remove("notSelectedMenu");
+  let pageFinder = () =>{
+    let page = window.location.hash;
+    let el
+    page = page.slice(2,-1)
+    console.log(page)
+    let oldPage
+    console.log(activePage)
     
+
+      oldPage = document.getElementById(activePage)
+      oldPage.classList.add("notSelectedMenu");
+      oldPage.classList.remove("selectedMenu");
+
+      el = document.getElementById(page)
+      el.classList.remove("notSelectedMenu");
+      el.classList.add("selectedMenu");
+    
+    setPage(el)
   }
+
+  useEffect(() =>{
+    pageFinder()
+  }, [activePage])
+
   let arrows = "<>";
   return (
     <div className="contentMenu">
       <Link
         to={"/"}
         id="about"
-        onClick={() => {
-          pageSetter("about");
-        }}
         className="menuTab selectedMenu"
       >
         <p className="menuIcon menuIconOrange">{arrows}</p>
@@ -32,9 +42,6 @@ export const NavBar = () => {
         to={"/projects"}
         id="projects"
         className="menuTab notSelectedMenu"
-        onClick={() => {
-          pageSetter("projects");
-        }}
       >
         <p className="menuIcon menuIconYellow">JS</p>
         <p className="menuText">Projects</p>
@@ -43,9 +50,6 @@ export const NavBar = () => {
         to={"/skills"}
         id="skills"
         className="menuTab notSelectedMenu"
-        onClick={() => {
-          pageSetter("skills");
-        }}
       >
         <p className="menuIcon menuIconBlue">
           <i className="fab fa-hooli"></i>
@@ -55,9 +59,6 @@ export const NavBar = () => {
       <Link
         to={"/resume"}
         id="resume"
-        onClick={() => {
-          pageSetter("resume");
-        }}
         className="menuTab notSelectedMenu"
       >
         <p className="menuIcon menuIconBlue">#</p>

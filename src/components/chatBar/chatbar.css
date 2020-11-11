@@ -1,6 +1,6 @@
 .chatBar_Main{
   width: 300px;
-  padding: 10px 10px 0px 10px;
+  padding: 10px 10px 5px 10px;
   max-height: 500px;
   position: fixed;
   bottom: 0;
@@ -23,4 +23,18 @@
 
 .chatFrame{
   height:480px;
+}
+
+.botDiv{
+  display: flex;
+  justify-content: center;
+}
+
+.chatButton{
+  padding: 5px;
+  text-decoration: none;
+  background: #859900;
+  margin: 15px;
+  border-radius: 15px;
+  font-family: Monaco;
 }
