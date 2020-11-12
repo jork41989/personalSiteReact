@@ -1,6 +1,7 @@
 import React from "react";
 import './footerStyle.css'
 export const Footer = () => {
+  
   return (
     <div className="footerMain">
       <div className="footerHead">

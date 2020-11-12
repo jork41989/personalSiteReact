@@ -1,31 +1,40 @@
 import React, { useEffect, useState} from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 export const NavBar = () => {
-  const [activePage, setPage] = useState("")
-
+  const [activePage, setPage] = useState("about")
+  const local = useLocation();
   let pageFinder = () =>{
     let page = window.location.hash;
     let el
-    page = page.slice(2,-1)
-    console.log(page)
+    page = page.slice(2)
     let oldPage
-    console.log(activePage)
-    
-
-      oldPage = document.getElementById(activePage)
+    if(activePage !== page){
+      if (activePage === ""){
+        oldPage = document.getElementById("about");
+      } else {
+        
+        oldPage = document.getElementById(activePage);
+      } 
+      if(page === "") {
+        el = document.getElementById("about");
+        el.classList.remove("notSelectedMenu");
+        el.classList.add("selectedMenu");
+      } else if(page){
+        el = document.getElementById(`${page}`);
+        el.classList.remove("notSelectedMenu");
+        el.classList.add("selectedMenu");
+      } 
       oldPage.classList.add("notSelectedMenu");
       oldPage.classList.remove("selectedMenu");
 
-      el = document.getElementById(page)
-      el.classList.remove("notSelectedMenu");
-      el.classList.add("selectedMenu");
-    
-    setPage(el)
+      setPage(page)
+    }
   }
 
   useEffect(() =>{
+
     pageFinder()
-  }, [activePage])
+  }, [local])
 
   let arrows = "<>";
   return (
@@ -34,6 +43,7 @@ export const NavBar = () => {
         to={"/"}
         id="about"
         className="menuTab selectedMenu"
+        onClick={pageFinder}
       >
         <p className="menuIcon menuIconOrange">{arrows}</p>
         <p className="menuText">About Me</p>
@@ -42,6 +52,7 @@ export const NavBar = () => {
         to={"/projects"}
         id="projects"
         className="menuTab notSelectedMenu"
+        onClick={pageFinder}
       >
         <p className="menuIcon menuIconYellow">JS</p>
         <p className="menuText">Projects</p>
@@ -50,6 +61,7 @@ export const NavBar = () => {
         to={"/skills"}
         id="skills"
         className="menuTab notSelectedMenu"
+        onClick={pageFinder}
       >
         <p className="menuIcon menuIconBlue">
           <i className="fab fa-hooli"></i>
@@ -60,6 +72,7 @@ export const NavBar = () => {
         to={"/resume"}
         id="resume"
         className="menuTab notSelectedMenu"
+        onClick={pageFinder}
       >
         <p className="menuIcon menuIconBlue">#</p>
         <p className="menuText">Resume</p>
