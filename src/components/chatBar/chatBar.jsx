@@ -8,11 +8,11 @@ export const ChatBar = () => {
     let frame = document.getElementById("bot_link");
     if (chat){
       frame.classList.add("hideMe")
-      setArrow(<i class="fas fa-arrow-circle-up"></i>);
+      setArrow(<i className="fas fa-arrow-circle-up"></i>);
       setChat(false)
     } else {
       frame.classList.remove("hideMe");
-      setArrow(<i class="fas fa-arrow-circle-down"></i>);
+      setArrow(<i className="fas fa-arrow-circle-down"></i>);
       setChat(true);
     }
   }

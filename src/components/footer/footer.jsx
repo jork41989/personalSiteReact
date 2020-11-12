@@ -1,7 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import './footerStyle.css'
 export const Footer = () => {
+  const local = useLocation();
   
+  let branchMaker = () => {
+    let branchDiv = document.getElementById("footBranch");
+    let newBranch = local.pathname.slice(1)
+    if(newBranch === ""){
+      branchDiv.innerHTML = "about"
+    } else {
+      branchDiv.innerHTML = newBranch
+    }
+  }
+
+  useEffect(()=>{
+    branchMaker()
+  }, [local])
   return (
     <div className="footerMain">
       <div className="footerHead">
