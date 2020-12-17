@@ -231,7 +231,7 @@ export const Resume = () => {
           </div>
           <div className="resumeText noUL">
             <a
-              href="https://actionboxd.com/#/"
+              href="http://actionboxd.com/#/"
               target="_blank"
               rel="noopener noreferrer"
               className="noUL"

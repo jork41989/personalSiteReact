@@ -78,7 +78,7 @@ export const Projects = () => {
                 Github
               </a>
               <a
-                href="https://actionboxd.com/#/"
+                href="http://actionboxd.com/#/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="projectLink"
